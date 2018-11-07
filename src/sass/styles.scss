@@ -1,0 +1,54 @@
+$border-radius      : 0rem !default;
+$border-radius-lg   : 0rem !default;
+$border-radius-sm   : 0rem !default;
+
+// colors
+$default-grey       : rgba(black, 0.33);
+$dark-grey          : rgba(black, 0.66);
+$light-grey         : rgba(black, 0.10);
+$lighter-grey       : rgba(black, 0.05);
+$lightest-grey      : rgba(black, 0.01);
+
+$primary            : rgb(86, 104, 98);
+
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'partials/typography';
+@import 'partials/menu';
+@import 'partials/footer';
+
+/* Bootstrap Overwrite & Site wide styles */
+hr {
+    border-top: 1px solid $lighter-grey;
+}
+.btn {
+    padding:0.75rem 1.5rem;
+}
+.row {
+    padding-top: ($spacer * 2);
+    padding-bottom: ($spacer * 2);
+}
+.lead {
+    font-size: 1.625rem;
+}
+.no-padding {
+    padding:0;
+}
+.jumbotron {
+    background: $lightest-grey;
+}
+.form-control {
+    border: 1px solid $light-grey;
+}
+.card {
+    border: 1px solid $lighter-grey;
+    & .card-header {
+        border-bottom: 1px solid $lighter-grey;
+    }
+    & .card-footer {
+        border-top: 1px solid $lighter-grey;
+    }
+}
+.card-header, .card-footer {
+    background: $lightest-grey;
+
+}
