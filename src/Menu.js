@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink as RRNavLink } from 'react-router-dom';
 import {
     Container,
     Collapse,
     Navbar,
     NavbarToggler,
-    //NavbarBrand,
+    NavbarBrand,
     Nav,
     NavItem,
     NavLink
@@ -28,18 +28,20 @@ class Menu extends Component {
     render() {
         return (
             <Container className="no-padding">
-                <Navbar toggleable dark>
+                
+                <Navbar light expand="md">
+                    <NavbarBrand>Hello</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar>
                             <NavItem>
-                                <NavLink tag={Link} to="/">Home</NavLink>
+                                <NavLink tag={RRNavLink} activeClassName="active" exact to="/">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} to="/contact">Form</NavLink>
+                                <NavLink tag={RRNavLink} activeClassName="active" to="/contact">Form</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} to="/cards">Cards</NavLink>
+                                <NavLink tag={RRNavLink} activeClassName="active" to="/cards">Cards</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

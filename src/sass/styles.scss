@@ -8,7 +8,12 @@ $light-grey: rgba(black, 0.10);
 $lighter-grey: rgba(black, 0.05);
 $lightest-grey: rgba(black, 0.01);
 
-$primary: rgb(86, 104, 98);
+
+$primary: #ea0726;
+$secondary: #fe810d;
+//#013461;
+$info: #88d5bb;
+
 
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'partials/typography';
