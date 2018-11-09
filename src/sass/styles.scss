@@ -9,7 +9,7 @@ $lighter-grey: rgba(black, 0.05);
 $lightest-grey: rgba(black, 0.01);
 
 
-$primary: #ea0726;
+$primary: #bc4123;
 $secondary: #fe810d;
 //#013461;
 $info: #88d5bb;
@@ -19,6 +19,13 @@ $info: #88d5bb;
 @import 'partials/typography';
 @import 'partials/menu';
 @import 'partials/footer';
+
+#root > div.dark {
+    background: #0b172a;
+    & * {
+        color:white;
+    }
+}
 
 /* Bootstrap Overwrite & Site wide styles */
 

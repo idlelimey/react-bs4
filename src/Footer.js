@@ -6,14 +6,15 @@ class Footer extends Component {
     return (
         <footer>
             <Container>
-                <Row>
-                    <Col sm={12}>
+                <Row className="display">
+                    <Col xs={12}>
                         <p className="text-center">
-                            <img src={require('./images/logo.svg')} alt="Logo" className="logo" />
+                            <img src={require('./images/react.svg')} alt="Logo" className="logo" />
                         </p>
                     </Col>
-                </Row>
-                <Row className="display">
+                    <Col xs={12}>
+                        <p className="text-center">Built with React</p>
+                    </Col>
                     <Col sm={4}>
                         <p className="text-center">Lorem ipsum</p>
                     </Col>
