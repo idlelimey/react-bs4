@@ -11,9 +11,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    ButtonGroup,
-    Button
+    NavLink
 } from 'reactstrap';
 
 class Menu extends Component {
@@ -38,9 +36,10 @@ class Menu extends Component {
         return (
             <Container className="no-padding">
                 
-                <Navbar expand="md">
+                <Navbar expand="md" className={'navbar-' + this.props.currentTheme}>
                     <NavbarBrand>Hello</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
+                    
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar>
                             <NavItem>
@@ -53,11 +52,13 @@ class Menu extends Component {
                                 <NavLink tag={RRNavLink} activeClassName="active" to="/cards">Cards</NavLink>
                             </NavItem>
 
-                                <ButtonGroup className="pull-right">
-                                    <Button color="primary" size="sm" onClick={this.props.doThemeSwitch} data-theme="light" active={this.props.currentTheme === 'light'}>Light</Button>
-                                    <Button color="primary" size="sm" onClick={this.props.doThemeSwitch} data-theme="dark"  active={this.props.currentTheme === 'dark'}>Dark</Button>
-                                </ButtonGroup>
+                                
 
+                        </Nav>
+                        <Nav className="ml-md-auto">
+                            <NavItem>
+                                <span className="theme-switch" onClick={this.props.doThemeSwitch} data-theme={this.props.currentTheme === 'light' ? 'dark' : 'light'}>&#9680;</span>
+                            </NavItem>
                         </Nav>
                     </Collapse>
                 </Navbar>            

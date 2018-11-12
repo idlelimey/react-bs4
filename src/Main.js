@@ -30,9 +30,11 @@ class Main extends Component {
 
     themeChange(e){
         e.preventDefault();
+        console.log('1: ' + e.target.getAttribute('data-theme'));
         this.setState({
             theme: e.target.getAttribute('data-theme')
         });
+        console.log('2: ' + e.target.getAttribute('data-theme'));
     }
 
     render() {

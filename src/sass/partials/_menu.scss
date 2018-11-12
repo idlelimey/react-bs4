@@ -1,5 +1,5 @@
 nav {
-    border-bottom: 1px solid $lighter-grey;
+
     & .navbar-toggler {
         outline: none;
     }
@@ -8,4 +8,27 @@ nav {
             box-shadow: 0px 3px 0px $primary;
         }
     }
+    .theme-switch {
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        width: 2rem;
+        padding: 0;
+        color: $primary;
+        transform: rotate(45deg);
+        transform-origin: center;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+    }
+
 }
+.svg-default-fill {
+    fill: $primary;
+}
+#root > div.dark {
+    .theme-switch {
+        color: white;
+    }
+}
+     
