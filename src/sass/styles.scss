@@ -20,7 +20,7 @@ $dark-lightest-grey  : rgba(white, 0.01);
 $primary: #bc4123;
 $secondary: #fe810d;
 
-$dark-bg            : #0b172a;
+$dark-bg            : rgba(black,0.9);//#0b172a;
 //#013461;
 $info: #88d5bb;
 
@@ -29,6 +29,44 @@ $info: #88d5bb;
 @import 'partials/typography';
 @import 'partials/menu';
 @import 'partials/footer';
+
+@keyframes spin {
+    100% {
+        transform:rotate(359deg);
+    }
+}
+
+#root {
+    #page-loading {
+        width:100vw;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        left:0;
+        background: white;
+        z-index: 9999;
+       
+        &::after {
+            content: '\233D';
+            width: 3rem;
+            height: 3rem;
+            font-size: 3rem;
+            display: block;
+            line-height: 3rem;
+            text-align:center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%), rotate(0deg);
+            transform-origin: center;
+            animation: spin 4s linear infinite;
+        }
+    }
+    
+    & .wrapper {
+        min-height: 100vh;
+    }
+}
 
 #root > div.dark {
     background: $dark-bg ;
@@ -102,4 +140,8 @@ hr {
     .card-header, .card-footer {
         background: $lightest-grey;
     }
+}
+
+.nav-padding {
+    padding-top: 3.5rem;
 }
